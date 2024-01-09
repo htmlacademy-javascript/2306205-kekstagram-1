@@ -1,7 +1,7 @@
 
 const checkPalindrome = (palindrome) => {
 
-  let palindromeEd = palindrome
+  const palindromeEd = palindrome
     .replaceAll(' ', '')
     .toLowerCase();
 
@@ -13,7 +13,7 @@ const checkPalindrome = (palindrome) => {
 
   return palindromeReverse === palindromeEd;
 };
-
+checkPalindrome();
 
 const getNumbers = (anyString) => {
 
@@ -28,14 +28,15 @@ const getNumbers = (anyString) => {
   }
   return parseInt(anyNumber, 10);
 };
-
+getNumbers();
 
 const checkStringLength = (str, length) => str.length <= length;
+checkStringLength();
 
 
 function makeName(sourse, minLength, addition) {
 
-  let targetLength = minLength - sourse.length;
+  const targetLength = minLength - sourse.length;
 
   if (targetLength <= 0) {
     return sourse;
@@ -43,3 +44,4 @@ function makeName(sourse, minLength, addition) {
   return addition.slice(0, targetLength % addition.length) + addition.repeat(targetLength / addition.length) + sourse;
 }
 
+makeName();
